@@ -1,4 +1,4 @@
-// 🧠 Task 2: Using fetch() with .then()
+//  Task 2: Using fetch() with .then()
 function fetchProductsThen() {
   fetch('https://www.course-api.com/javascript-store-products')
     .then(response => {
@@ -18,7 +18,7 @@ function fetchProductsThen() {
     });
 }
 
-// 🧠 Task 3: Using async/await with try/catch
+// Task 3: Using async/await with try/catch
 async function fetchProductsAsync() {
   try {
     const response = await fetch('https://www.course-api.com/javascript-store-products');
@@ -32,7 +32,7 @@ async function fetchProductsAsync() {
   }
 }
 
-// 🧠 Task 4: Display the first 5 products
+//  Task 4: Display the first 5 products
 function displayProducts(products) {
   const container = document.getElementById('product-container');
   container.innerHTML = '';
@@ -51,4 +51,9 @@ function displayProducts(products) {
 
     container.appendChild(productElement);
   });
+}
+
+//  Task 5: Reusable error handler
+function handleError(error) {
+  console.error('An error occurred:', error.message);
 }
